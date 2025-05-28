@@ -13,8 +13,8 @@ Description: The PaF income polarization index as proposed by Duclos J. Y., Este
 \tabular{ll}{
 Package: \tab DER\cr
 Type: \tab Package\cr
-Version: \tab 1.0 \cr
-Date: \tab 2025-02-22 \cr
+Version: \tab 1.1 \cr
+Date: \tab 2025-05-28 \cr
 }
 }
 

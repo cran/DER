@@ -11,7 +11,8 @@ paf.boot <- function(y, a, R = 1000) {
     d <- Rfast::vecdist(y)
     fhat <- Rfast::rowmeans( exp( -0.5 * d^2 / h^2 ) ) / sqrt(2 * pi) / h
     fhata <- fhat^a
-    paf <- sum( fhata * d ) / n^2
+    #paf <- sum( fhata * d ) / n^2
+    paf <- sum( Rfast::eachcol.apply(d, fhata) ) / n^2
     alien <- mean(d)
     ident <- mean(fhata)
     rho <- paf / (alien * ident) - 1
