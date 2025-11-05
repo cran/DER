@@ -10,7 +10,7 @@ The PaF income polarization index
 }
 
 \usage{
-paf(y, a)
+paf(y, a, ncores = 1)
 pafF(y, a)
 }
 
@@ -19,7 +19,13 @@ pafF(y, a)
 A numeric vector with income data.
 }
 \item{a}{
-The value of \eqn{\alpha}. This can either be a number or a vector with many values. In any case, the \eqn{\alpha} may take values between 0.25 and 1.
+The value of \eqn{\alpha}. This can either be a number or a vector with many values. In any case, 
+the \eqn{\alpha} may take values between 0.25 and 1.
+}
+\item{ncores}{
+The number of cores to use. If greater than 1, parallel computing will take place. It is advisable 
+to use it if you have many observations and or many variables, otherwise it will slow down the process. 
+The default is 1, meaning that code is executed serially.
 }
 }
 
@@ -40,9 +46,9 @@ Duclos J. Y., Esteban, J. and Ray D. (2004). Polarization: concepts, measurement
 }
 
 \author{
-Michail Tsagris.
+Michail Tsagris and Christos Adam.
 
-R implementation and documentation: Michail Tsagris \email{mtsagris@uoc.gr}.
+R implementation and documentation: Michail Tsagris \email{mtsagris@uoc.gr} and Christos Adam \email{econp266@econ.soc.uoc.gr}.
 }
 
 %\note{
